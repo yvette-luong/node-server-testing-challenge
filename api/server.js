@@ -4,7 +4,7 @@ const server = express();
 
 server.use(express.json());
 
-server.get("/", (req, res, next ) =>{
+server.get("/project", (req, res, next ) =>{
     res.status(200).json({ api: "Server Testing Challenge" })
     next();
 });

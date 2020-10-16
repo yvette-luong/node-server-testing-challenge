@@ -3,12 +3,20 @@
 module.exports = {
 
   development: {
+    useNullAsDefault: true,
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
+      filename: './database/project.db3'
     }, 
-    useNullAsDefault: true,
+    migrations: {
+      directory: "./database/migrations",
   },
+  seeds: {
+    directory: "./database/seeds",
+  },
+    },
+ //always set migrations and seeds inside development
+
 
   staging: {
     client: 'postgresql',
