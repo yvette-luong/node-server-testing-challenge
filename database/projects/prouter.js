@@ -33,9 +33,9 @@ routerPro.get("/:id", (req, res) => {
 routerPro.post("/", (req, res) => {
     Pro.add(req.body)
     .then(projects => {
-      if (project) {
+      if (projects) {
         Pro.findById(project[0])
-        .then(project => {
+        .then(projects => {
           res.status(201).json(projects);
         })
         .catch(err => {
